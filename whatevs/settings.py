@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'whatevs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'orderly',
-        'USER': 'USERNAME',
-        'PASSWORD': 'p',
+        'NAME': 'DB_NAME',
+        'USER': 'OWNER',
+        'PASSWORD': 'PASSWROD',
         'HOST': 'localhost',
         'PORT': '5432',
     }
