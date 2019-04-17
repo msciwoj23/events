@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a21e782-0734-44a9-97ed-1b05ca22ee23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/oa/migrations/0006_activity.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oa/migrations/0007_activity_status_message_tag_tag_activity_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/orderly.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/orderly.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oa/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/oa/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oa/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oa/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatevs/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/whatevs/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,6 +204,8 @@
         <option value="$PROJECT_DIR$/script" />
         <option value="$PROJECT_DIR$/oa/admin.py" />
         <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/oa/admin.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/oa/models.py" />
         <option value="$PROJECT_DIR$/oa/views.py" />
         <option value="$PROJECT_DIR$/oa/urls.py" />
@@ -354,12 +347,34 @@
       <updated>1555230600178</updated>
       <workItem from="1555230614422" duration="10471000" />
       <workItem from="1555253745595" duration="3599000" />
-      <workItem from="1555314762158" duration="3505000" />
+      <workItem from="1555314762158" duration="6828000" />
     </task>
+    <task id="LOCAL-00001" summary="add models">
+      <created>1555318683906</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555318683906</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add requirements">
+      <created>1555329689216</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555329689216</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add gitignore">
+      <created>1555329752914</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555329752914</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17575000" />
+    <option name="totallyTimeSpent" value="20898000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -398,12 +413,18 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32983023" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.27485853" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17542441" />
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add models" />
+    <MESSAGE value="add requirements" />
+    <MESSAGE value="add gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/orderly$manage.coverage" NAME="manage Coverage Results" MODIFIED="1555316759117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -71,16 +71,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'whatevs.wsgi.application'
 
-
+#
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'DB_NAME',
-        'USER': 'olo',
-        'PASSWORD': '323511',
+        'NAME': 'orderly',
+        'USER': 'test2',
+        'PASSWORD': 'test2',
         'HOST': 'localhost',
         'PORT': '5432',
     }
