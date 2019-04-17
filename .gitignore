@@ -1,4 +1,5 @@
-.settings.py
+*.whatevs/settings.py
+*.gitignore
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
