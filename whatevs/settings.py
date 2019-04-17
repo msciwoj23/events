@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'oa.apps.WhatevConfig',
+    'events.apps.EventsConfig',
 ]
 
 MIDDLEWARE = [
@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'DB_NAME',
-        'USER': 'OWNER',
-        'PASSWORD': 'PASSWROD',
+        'USER': 'olo',
+        'PASSWORD': '323511',
         'HOST': 'localhost',
         'PORT': '5432',
     }
