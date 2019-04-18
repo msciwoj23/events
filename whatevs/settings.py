@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'oa.apps.WhatevConfig',
+    'reviewer'
 ]
 
 MIDDLEWARE = [
@@ -78,9 +79,9 @@ WSGI_APPLICATION = 'whatevs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'DB_NAME',
-        'USER': 'OWNER',
-        'PASSWORD': 'PASSWROD',
+        'NAME': 'patus',
+        'USER': 'patus',
+        'PASSWORD': 'CodeC00l',
         'HOST': 'localhost',
         'PORT': '5432',
     }
