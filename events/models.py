@@ -68,12 +68,12 @@ class tag(models.Model):
         return self.tag_name
 
 
-# class tag_activity(models.Model):
-#     activities_id: [] = ArrayField(models.IntegerField(primary_key=True))
-#     tag_id: int = models.BigIntegerField()
-#
-#     def __str__(self):
-#         return str(self.tag_id)
+class tag_activity(models.Model):
+    activities_id: [] = ArrayField(models.IntegerField(primary_key=True))
+    tag_id: int = models.BigIntegerField()
+
+    def __str__(self):
+        return str(self.tag_id)
 
 
 class user(models.Model):
