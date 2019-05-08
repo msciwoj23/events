@@ -16,8 +16,3 @@ class EventForm(ModelForm):
             'deadline_date',
             'description'
         )
-        # widgets = {
-        #     'start_date': DateField(attrs={'hidden':True}),
-        #     'end_date': DateField(attrs={'hidden':True}),
-        #     'deadline_date': DateField(attrs={'hidden':True})
-        # }

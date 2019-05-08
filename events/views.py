@@ -17,6 +17,11 @@ def events(request):
 
 def new_event(request):
     form = EventForm(request.POST or None)
+    print('-------------------')
+    print('BEGIN')
+    print(form)
+    print('END')
+    print('-------------------')
     if form.is_valid():
         form.save()
     context = {
