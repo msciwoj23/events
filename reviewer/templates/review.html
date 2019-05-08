@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hello World!</h1>
+
+   <ul>
+       {% for x in activity %}
+           <li>{{ x.title }}, {{ x.type }}</li>
+       {% endfor %}
+   </ul>
+
+    <form action="/done/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+
+
+{% endblock %}
