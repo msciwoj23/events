@@ -3,7 +3,7 @@ from django.contrib.postgres.fields import ArrayField
 
 
 class event(models.Model):
-    event_id = models.BigIntegerField()
+    event_id = models.AutoField(primary_key=True)
     event_name: str = models.CharField(max_length=200)
     owner_id = models.BigIntegerField()
     event_status_id = models.BigIntegerField()
