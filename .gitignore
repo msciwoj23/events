@@ -1,5 +1,5 @@
 whatevs/settings.py
-.idea
+.idea/
 events/__pycache__/
 events/migrations/
 whatevs/__pycache__/
