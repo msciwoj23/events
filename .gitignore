@@ -1,5 +1,8 @@
 whatevs/settings.py
-.gitignore
+.idea
+events/__pycache__/
+events/migrations/
+whatevs/__pycache__/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
