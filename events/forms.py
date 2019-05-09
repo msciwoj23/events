@@ -3,10 +3,7 @@ from django.conf import settings
 
 from .models import Event
 
-my_date_formats = [
-                 '%d-%m-%Y',
-                 '%d/%m/%Y',
-                 '%d.%m.%Y']
+my_date_formats = ['%d-%m-%Y','%d/%m/%Y','%d.%m.%Y']
 
 
 class EventForm(ModelForm):

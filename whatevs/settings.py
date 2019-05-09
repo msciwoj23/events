@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'whatevs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_test',
-        'USER': 'wirek',
-        'PASSWORD': 'fenix',
+        'NAME': 'new_database',
+        'USER': 'olo',
+        'PASSWORD': '323511',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Warsaw'
 
 USE_I18N = True
 
@@ -125,3 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+NORMAL_DATE_FORMATS = ['%d-%m-%Y','%d/%m/%Y','%d.%m.%Y']
+
+
