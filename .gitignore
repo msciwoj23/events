@@ -1,8 +1,10 @@
 whatevs/settings.py
-.idea/
+.idea/*
 events/__pycache__/
 events/migrations/
 whatevs/__pycache__/
+
+# fgsdfhsdhsdfhdfsdfh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
