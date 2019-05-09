@@ -1,8 +1,13 @@
 whatevs/settings.py
 .idea/*
+.idea
+.idea/
 events/__pycache__/
 events/migrations/
 whatevs/__pycache__/
+
+
+
 
 # fgsdfhsdhsdfhdfsdfh
 
