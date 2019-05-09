@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 from .forms import EventForm
-from .models import event
+from .models import Event
 
 
 # Create your views here.

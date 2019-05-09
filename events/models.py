@@ -2,12 +2,12 @@ from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
 
-class event(models.Model):
+class Event(models.Model):
     event_id = models.AutoField(primary_key=True)
-    event_name: str = models.CharField(max_length=200)
+    event_name = models.CharField(max_length=200)
     owner_id = models.BigIntegerField()
     event_status_id = models.BigIntegerField()
-    place: str = models.CharField(max_length=200)
+    place = models.CharField(max_length=200)
     start_date = models.DateField()
     end_date = models.DateField()
     deadline_date = models.DateField()
@@ -17,7 +17,7 @@ class event(models.Model):
         return self.description
 
 
-class event_status(models.Model):
+class Event_status(models.Model):
     event_status_id: int = models.BigIntegerField(primary_key=True)
     event_status_name: str = models.TextField(max_length=200)
 
@@ -25,7 +25,7 @@ class event_status(models.Model):
         return self.event_status_name
 
 
-class activity(models.Model):
+class Activity(models.Model):
     activity_id: int = models.BigIntegerField(primary_key=True)
     event_id: int = models.BigIntegerField()
     author_id: int = models.BigIntegerField()
@@ -38,7 +38,7 @@ class activity(models.Model):
     def __str__(self):
         return self.title
 
-class activity_status(models.Model):
+class Activity_status(models.Model):
     activity_status_id: int = models.BigIntegerField(primary_key=True)
     activity_status_name: str = models.TextField(max_length=200)
 
@@ -46,7 +46,7 @@ class activity_status(models.Model):
         return self.activity_status_name
 
 
-class message(models.Model):
+class Message(models.Model):
     message_id: int = models.BigIntegerField(primary_key=True)
     author_id: int = models.BigIntegerField()
     activity_id: int = models.BigIntegerField()
@@ -57,7 +57,7 @@ class message(models.Model):
         return self.message
 
 
-class tag(models.Model):
+class Tag(models.Model):
     tag_id: int = models.BigIntegerField(primary_key=True)
     tag_name: str = models.TextField(max_length=200)
 
@@ -65,7 +65,7 @@ class tag(models.Model):
         return self.tag_name
 
 
-class tag_activity(models.Model):
+class Tag_activity(models.Model):
     activities_id: [] = ArrayField(models.IntegerField())
     tag_id: int = models.BigIntegerField()
 
@@ -73,7 +73,7 @@ class tag_activity(models.Model):
         return str(self.tag_id)
 
 
-class user(models.Model):
+class User(models.Model):
     user_id = models.BigIntegerField()
     login: str = models.CharField(max_length=200)
     password: str = models.CharField(max_length=200)
