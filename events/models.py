@@ -59,9 +59,6 @@ class Activity(models.Model):
     description: str = models.TextField(max_length=200)
     duration = models.DateField()
 
-
-
-    @property
     def __str__(self):
         return self.title
 
