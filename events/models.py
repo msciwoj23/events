@@ -3,11 +3,11 @@ from django.contrib.postgres.fields import ArrayField
 from django.db.models import ForeignKey
 
 
-class event(models.Model):
+class Event(models.Model):
     event_id = models.BigIntegerField(primary_key=True)
     event_name: str = models.CharField(max_length=200)
-    user_id: ForeignKey = ForeignKey('user', on_delete=models.CASCADE)
-    event_status_id: ForeignKey = models.ForeignKey('event_status', on_delete=models.CASCADE)
+    user_id: ForeignKey = ForeignKey('events.User', on_delete=models.CASCADE)
+    event_status_id: ForeignKey = models.ForeignKey('events.EventStatus', on_delete=models.CASCADE)
     place: str = models.CharField(max_length=200)
     start_date = models.DateField()
     end_date = models.DateField()
@@ -18,7 +18,7 @@ class event(models.Model):
         return self.description
 
 
-class event_status(models.Model):
+class EventStatus(models.Model):
     event_status_id: int = models.BigIntegerField(primary_key=True)
     event_status_name: str = models.TextField(max_length=200)
 
@@ -26,11 +26,11 @@ class event_status(models.Model):
         return self.event_status_name
 
 
-class activity(models.Model):
+class Activity(models.Model):
     activity_id: int = models.BigIntegerField(primary_key=True)
-    event_id: ForeignKey = models.ForeignKey('event', on_delete=models.CASCADE)
-    user_id: ForeignKey = models.ForeignKey('user', on_delete=models.CASCADE)
-    activity_status_id: ForeignKey = models.ForeignKey('activity_status', on_delete=models.CASCADE)
+    event_id: ForeignKey = models.ForeignKey('events.Event', on_delete=models.CASCADE)
+    user_id: ForeignKey = models.ForeignKey('events.User', on_delete=models.CASCADE)
+    # activity_status_id: ForeignKey = models.ForeignKey('events.ActivityStatus', on_delete=models.CASCADE)
     title: str = models.TextField(max_length=200)
     type: str = models.TextField(max_length=200)
     description: str = models.TextField(max_length=200)
@@ -41,7 +41,7 @@ class activity(models.Model):
         return self.title
 
 
-class activity_status(models.Model):
+class ActivityStatus(models.Model):
     activity_status_id: int = models.BigIntegerField(primary_key=True)
     activity_status_name: str = models.TextField(max_length=200)
 
@@ -49,10 +49,10 @@ class activity_status(models.Model):
         return self.activity_status_name
 
 
-class message(models.Model):
+class Message(models.Model):
     message_id: int = models.BigIntegerField(primary_key=True)
-    user_id: ForeignKey = models.ForeignKey('user', on_delete=models.CASCADE)
-    activity_id: ForeignKey = models.ForeignKey('activity', on_delete=models.CASCADE)
+    # user_id: ForeignKey = models.ForeignKey('events.User', on_delete=models.CASCADE)
+    # activity_id: ForeignKey = models.ForeignKey('events.Activity', on_delete=models.CASCADE)
     created = models.DateField()
     message: str = models.TextField(max_length=200)
 
@@ -60,7 +60,7 @@ class message(models.Model):
         return self.message
 
 
-class tag(models.Model):
+class Tag(models.Model):
     tag_id: int = models.BigIntegerField(primary_key=True)
     tag_name: str = models.TextField(max_length=200)
 
@@ -68,7 +68,7 @@ class tag(models.Model):
         return self.tag_name
 
 
-class tag_activity(models.Model):
+class TagActivity(models.Model):
     activities_id: [] = ArrayField(models.IntegerField(primary_key=True))
     tag_id: int = models.BigIntegerField()
 
@@ -76,7 +76,7 @@ class tag_activity(models.Model):
         return str(self.tag_id)
 
 
-class user(models.Model):
+class User(models.Model):
     user_id: int = models.BigIntegerField(primary_key=True)
     login: str = models.CharField(max_length=200)
     password: str = models.CharField(max_length=200)
