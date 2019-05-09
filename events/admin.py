@@ -1,12 +1,12 @@
 from django.contrib import admin
 
-from .models import event_status, event, activity, activity_status, user, message, tag, tag_activity
+from .models import EventStatus, Event, Activity, ActivityStatus, User, Message, Tag, TagActivity
 
-admin.site.register(event_status)
-admin.site.register(event)
-admin.site.register(activity)
-admin.site.register(activity_status)
-admin.site.register(user)
-admin.site.register(message)
-admin.site.register(tag)
-admin.site.register(tag_activity)
+admin.site.register(EventStatus)
+admin.site.register(Event)
+admin.site.register(Activity)
+admin.site.register(ActivityStatus)
+admin.site.register(User)
+admin.site.register(Message)
+admin.site.register(Tag)
+admin.site.register(TagActivity)
