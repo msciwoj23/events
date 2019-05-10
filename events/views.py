@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-from .forms import EventForm
-from .models import event
+from .forms import EventForm, ActivityForm
+from .models import Event, Activity
 
 
 # Create your views here.
@@ -28,3 +28,12 @@ def new_event(request):
         'form': form
     }
     return render(request, 'events/new_event.html', context)
+
+def new_activity(request):
+    form = ActivityForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    context = {
+        'form': form
+    }
+    return render(request, 'events/new_activity.html', context)

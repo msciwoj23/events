@@ -1,14 +1,14 @@
 from django.forms import ModelForm, DateField
 
-from .models import event
+from .models import Event, Activity
 
 
 class EventForm(ModelForm):
     class Meta:
-        model = event
+        model = Event
         fields = (
             'event_name',
-            'owner_id',
+            'user_id',
             'event_status_id',
             'place',
             'start_date',
@@ -16,3 +16,9 @@ class EventForm(ModelForm):
             'deadline_date',
             'description'
         )
+
+
+class ActivityForm(ModelForm):
+    class Meta:
+        model = Activity
+        exclude = ('activity_id',)
