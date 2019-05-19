@@ -31,8 +31,8 @@ class EventStatus(models.Model):
 class Event(models.Model):
     event_id = models.AutoField(primary_key=True)
     event_name = models.CharField(max_length=200)
-    user_id = ForeignKey(User, on_delete=models.CASCADE)
-    event_status_id = models.ForeignKey(EventStatus, on_delete=models.CASCADE)
+    user = ForeignKey(User, on_delete=models.CASCADE)
+    event_status = models.ForeignKey(EventStatus, on_delete=models.CASCADE)
     place = models.CharField(max_length=200)
     start_date = models.DateField()
     end_date = models.DateField()
@@ -59,13 +59,14 @@ class ActivityStatus(models.Model):
 
 class Activity(models.Model):
     activity_id = models.AutoField(primary_key=True)
-    event_id = models.ForeignKey(Event, on_delete=models.CASCADE)
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    activity_status_id = models.ForeignKey(ActivityStatus, on_delete=models.CASCADE)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    activity_status = models.ForeignKey(ActivityStatus, on_delete=models.CASCADE)
     title = models.TextField(max_length=200)
-    type = models.TextField(max_length=200)
+    activity_type = models.TextField(max_length=200)
     description = models.TextField(max_length=200)
     duration = models.DateField()
+
 
     def __str__(self):
         return self.title
@@ -73,8 +74,8 @@ class Activity(models.Model):
 
 class Message(models.Model):
     message_id = models.AutoField(primary_key=True)
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    activity_id = models.ForeignKey(Activity, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    activity = models.ForeignKey(Activity, on_delete=models.CASCADE)
     created = models.DateField()
     message = models.TextField(max_length=200)
 
@@ -85,16 +86,9 @@ class Message(models.Model):
 class Tag(models.Model):
     tag_id = models.AutoField(primary_key=True)
     tag_name = models.TextField(max_length=200)
+    activities = models.ManyToManyField(Activity)
 
     def __str__(self):
         return self.tag_name
-
-
-class TagActivity(models.Model):
-    activities_id = ArrayField(models.IntegerField(primary_key=True))
-    tag_id = models.BigIntegerField()
-
-    def __str__(self):
-        return str(self.tag_id)
 
 
