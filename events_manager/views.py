@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-from .forms import EventForm, ActivityForm
+from .forms import EventForm, ActivityForm, UserForm, EventStatusForm
 from .models import Event, Activity
 
 
@@ -29,6 +29,7 @@ def new_event(request):
     }
     return render(request, 'events/new_event.html', context)
 
+
 def new_activity(request):
     form = ActivityForm(request.POST or None)
     if form.is_valid():
@@ -37,3 +38,23 @@ def new_activity(request):
         'form': form
     }
     return render(request, 'events/new_activity.html', context)
+
+
+def new_user(request):
+    form = UserForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    context = {
+        'form': form
+    }
+    return render(request, 'events/new_user.html', context)
+
+
+def new_event_status(request):
+    form = EventStatusForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    context = {
+        'form': form
+    }
+    return render(request, 'events/new_event_status.html', context)
