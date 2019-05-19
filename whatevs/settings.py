@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'whatevs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_test',
+        'NAME': 'events_manager',
         'USER': 'wirek',
         'PASSWORD': 'fenix',
         'HOST': 'localhost',
