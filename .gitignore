@@ -1,4 +1,4 @@
-whatevs/settings.py
+main_app/settings.py
 .gitignore
 
 # Byte-compiled / optimized / DLL files

@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
 from django.db.models import ForeignKey
 
 
@@ -13,6 +12,9 @@ class User(models.Model):
     email = models.CharField(max_length=200)
     isAdmin = models.BooleanField()
 
+    class Meta:
+        db_table = 'user'
+
     def __str__(self):
         return self.first_name
 
@@ -22,7 +24,7 @@ class EventStatus(models.Model):
     event_status_name: str = models.TextField(max_length=200)
 
     class Meta:
-        db_table = 'events_event_status'
+        db_table = 'event_status'
 
     def __str__(self):
         return self.event_status_name
@@ -40,7 +42,7 @@ class Event(models.Model):
     description = models.CharField(max_length=200)
 
     class Meta:
-        db_table = 'events_event'
+        db_table = 'event'
 
     def __str__(self):
         return self.description
@@ -51,7 +53,7 @@ class ActivityStatus(models.Model):
     activity_status_name = models.TextField(max_length=200)
 
     class Meta:
-        db_table = 'events_activity_status'
+        db_table = 'activity_status'
 
     def __str__(self):
         return self.activity_status_name
@@ -67,6 +69,8 @@ class Activity(models.Model):
     description = models.TextField(max_length=200)
     duration = models.DateField()
 
+    class Meta:
+        db_table = 'activity'
 
     def __str__(self):
         return self.title
@@ -79,6 +83,9 @@ class Message(models.Model):
     created = models.DateField()
     message = models.TextField(max_length=200)
 
+    class Meta:
+        db_table = 'message'
+
     def __str__(self):
         return self.message
 
@@ -87,6 +94,9 @@ class Tag(models.Model):
     tag_id = models.AutoField(primary_key=True)
     tag_name = models.TextField(max_length=200)
     activities = models.ManyToManyField(Activity)
+
+    class Meta:
+        db_table = 'tag'
 
     def __str__(self):
         return self.tag_name
