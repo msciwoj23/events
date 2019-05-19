@@ -8,8 +8,8 @@ class EventForm(ModelForm):
         model = Event
         fields = (
             'event_name',
-            'user_id',
-            'event_status_id',
+            'user',
+            'event_status',
             'place',
             'start_date',
             'end_date',
