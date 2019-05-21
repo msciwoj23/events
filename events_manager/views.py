@@ -12,16 +12,18 @@ def home(request):
 
 
 def events(request):
-    return render(request, 'events/events.html')
+    event_list = Event.objects.order_by('-start_date')
+    print(event_list)
+    context = {'event_list' : event_list}
+    return render(request, 'events/events.html', context)
+
+
+def activities(request):
+    return render(request, 'events/activities.html')
 
 
 def new_event(request):
     form = EventForm(request.POST or None)
-    print('-------------------')
-    print('BEGIN')
-    print(form)
-    print('END')
-    print('-------------------')
     if form.is_valid():
         form.save()
     context = {

@@ -6,6 +6,13 @@
 </head>
 <body>
     <p>could be navbar</p>
+    <p><a href="{% url 'events_manager-home' %}"> home </a><br>
+        <a href="{% url 'events_manager-events_manager' %}"> events </a><br>
+        <a href="{% url 'events_manager-activities' %}"> activities </a><br>
+        <a href="{% url 'events_manager-new_event' %}"> new_event </a><br>
+        <a href="{% url 'events_manager-new_activity' %}"> new_activity </a><br>
+        <a href="{% url 'events_manager-new_event_status' %}"> new_event_status </a><br>
+        <a href="{% url 'events_manager-new_user' %}"> new_user </a> </p>
     {% block content %} {% endblock %}
 </body>
 </html>

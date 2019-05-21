@@ -45,7 +45,7 @@ class Event(models.Model):
         db_table = 'event'
 
     def __str__(self):
-        return self.description
+        return self.event_name
 
 
 class ActivityStatus(models.Model):
