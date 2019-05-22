@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 
 
@@ -13,13 +13,19 @@ def home(request):
 
 def events(request):
     event_list = Event.objects.order_by('-start_date')
-    print(event_list)
     context = {'event_list' : event_list}
     return render(request, 'events/events.html', context)
 
 
+def event_details(request, event_id):
+    event = get_object_or_404(Event, pk=event_id)
+    return render(request, 'events/event_details.html', {'event' : event})
+
+
 def activities(request):
-    return render(request, 'events/activities.html')
+    activity_list = Activity.objects.order_by('-title')
+    context = {'activity_list': activity_list}
+    return render(request, 'events/activities.html', context)
 
 
 def new_event(request):

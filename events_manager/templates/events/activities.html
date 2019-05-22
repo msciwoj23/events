@@ -2,4 +2,12 @@
 
 {% block content %}
     <h3>Activities page:</h3>
+    <table>
+    {% for activity in activity_list %}
+
+        <tr><td>{{ activity.title }}</td><td><a href="/event_details/{{ activity.event.event_id }}">event</a></td></tr>
+
+    {% endfor %}
+    </table>
+
 {% endblock %}
