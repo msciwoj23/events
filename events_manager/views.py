@@ -18,8 +18,11 @@ def events(request):
 
 
 def event_details(request, event_id):
+
     event = get_object_or_404(Event, pk=event_id)
-    return render(request, 'events/event_details.html', {'event' : event})
+    activities_list = Activity.objects.filter(event=event)
+    context = {'event': event, 'activities_list' : activities_list }
+    return render(request, 'events/event_details.html', context)
 
 
 def activities(request):

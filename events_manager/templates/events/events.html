@@ -3,10 +3,19 @@
 {% block content %}
     <h3>Events page:</h3>
 
+    <table>
+    <th>name</th><th>description</th><th>start_date</th><th>end_date</th>
     {% for event in event_list %}
-
-    <p>{{ event.event_name }}</p>
-
+    <tr>
+    <td><a href="{% url 'events_manager-event_details' event.event_id %}">{{ event.event_name }}</a></td>
+        <td>{{event.description}}</td>
+        <td>{{event.start_date}}</td>
+        <td>{{event.end_date}}</td>
     {% endfor %}
+
+    </table>
+
+
+    <a href="{% url 'events_manager-new_event' %}">click to add new event</a>
 
 {% endblock %}

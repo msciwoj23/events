@@ -1,8 +1,23 @@
 {% extends 'events/base.html' %}
 
 {% block content %}
-    <h3>Event details page:</h3>
 
-    <p>{{ event.event_name }} &nbsp; {{event.event_id}}</p>
+    <h4>Event details page:</h4>
 
+    <p>name&nbsp;description&nbsp;start_date&nbsp;end_date</p>
+
+    <p>{{ event.event_name }}&nbsp;{{event.description}}&nbsp;{{event.start_date}}&nbsp;{{event.end_date}}</p>
+
+
+    <h4>activities in this event:</h4>
+    <table>
+
+    <th>title</th><th>description</th><th>time</th><th>place</th>
+    {% for activity in activities_list %}
+        <tr>
+            <td>{{activity.title}}</td><td>{{activity.description}}</td>
+        </tr>
+    {% endfor %}
+
+    </table>
 {% endblock %}
