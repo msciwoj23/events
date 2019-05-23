@@ -21,6 +21,9 @@
             <td>{{activity.place}}</td>
         </tr>
     {% endfor %}
-
+        
     </table>
+    <br>
+
+    <a href="{% url 'events_manager-new_activity' %}">add new activity</a>
 {% endblock %}
