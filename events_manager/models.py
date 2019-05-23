@@ -20,8 +20,8 @@ class User(models.Model):
 
 
 class EventStatus(models.Model):
-    event_status_id: int = models.AutoField(primary_key=True)
-    event_status_name: str = models.TextField(max_length=200)
+    event_status_id = models.AutoField(primary_key=True)
+    event_status_name = models.TextField(max_length=200)
 
     class Meta:
         db_table = 'event_status'
@@ -67,7 +67,10 @@ class Activity(models.Model):
     title = models.TextField(max_length=200)
     activity_type = models.TextField(max_length=200)
     description = models.TextField(max_length=200)
+    time = models.DateTimeField()
     duration = models.DateField()
+    place = models.CharField(max_length=200)
+
 
     class Meta:
         db_table = 'activity'

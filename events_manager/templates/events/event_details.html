@@ -15,7 +15,10 @@
     <th>title</th><th>description</th><th>time</th><th>place</th>
     {% for activity in activities_list %}
         <tr>
-            <td>{{activity.title}}</td><td>{{activity.description}}</td>
+            <td>{{activity.title}}</td>
+            <td>{{activity.description}}</td>
+            <td>{{ activity.time|date:"D d M Y" }} {{ activity.time|time:"H:i" }}</td>
+            <td>{{activity.place}}</td>
         </tr>
     {% endfor %}
 

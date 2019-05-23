@@ -20,7 +20,7 @@ def events(request):
 def event_details(request, event_id):
 
     event = get_object_or_404(Event, pk=event_id)
-    activities_list = Activity.objects.filter(event=event)
+    activities_list = Activity.objects.filter(event=event).order_by('-time')[::-1]
     context = {'event': event, 'activities_list' : activities_list }
     return render(request, 'events/event_details.html', context)
 
