@@ -1,10 +1,9 @@
 {% extends 'events/base.html' %}
 
 {% block content %}
-    <h3>Events page:</h3>
 
-    <div class="row">
-
+    <h3 style="padding: 20px ">All events:</h3>
+    <div class="row" style="padding: 20px; padding-bottom: 0px">
         {% for event in event_list %}
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
@@ -24,8 +23,8 @@
     </div>
 
 
-    <a href="{% url 'events_manager-new_event' %}">
-        <button type="button" class="btn btn-primary">
+    <a href="{% url 'events_manager-new_event' %}" style="padding: 20px" >
+        <button type="button" class="btn btn-dark" >
         Click to add new event
         </button>
     </a>
