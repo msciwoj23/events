@@ -3,14 +3,14 @@ from django.db.models import ForeignKey
 
 
 class User(models.Model):
-    user_id = models.AutoField(primary_key=True)
+    user_id = models.AutoField(primary_key=True)    # user may be dropped, id coud be ok
     login = models.CharField(max_length=200)
     password = models.CharField(max_length=200)
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     nickname = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
-    isAdmin = models.BooleanField()
+    is_admin = models.BooleanField()
 
     class Meta:
         db_table = 'user'
