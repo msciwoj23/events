@@ -2,4 +2,12 @@
 
 {% block content %}
     <h3>This is Events Homepage!</h3>
+
+    <h4>These are upcoming Events:</h4>
+
+    {% for event in event_list %}
+        {{event.event_name}}<br>
+    {% endfor %}
+
+
 {% endblock %}

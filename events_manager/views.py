@@ -8,12 +8,15 @@ from .models import Event, Activity
 
 # Create your views here.
 def home(request):
-    return render(request, 'events/home.html')
+    event_list = Event.objects.order_by('-start_date')[:5]
+    context = {'event_list': event_list}
+    print(event_list)
+    return render(request, 'events/home.html', context)
 
 
 def events(request):
     event_list = Event.objects.order_by('-start_date')
-    context = {'event_list' : event_list}
+    context = {'event_list': event_list}
     return render(request, 'events/events.html', context)
 
 
