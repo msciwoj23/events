@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 <head>
-    <meta charset="UTF-8">
-    <title>Events!</title>
-</head>
-<body>
-    <div>
-        <div>
-        <p>could be navbar</p>
-        {% block content %} {% endblock %}
+    <link rel="stylesheet" type="text/css" href="/static/wirekstyle.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap Dashboard by Bootstrapious.com</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+  </head>
+
+
+  <body>
+    <div class="wrapper">
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <!-- User Info-->
+          <div class="sidenav-header-inner text-center"><img src="{% static "events/dice.png" %}" alt="logo" class="img-fluid rounded-circle">
+            <h2 class="h5">Events Manager</h2><span></span>
+          </div>
+          <!-- Small Brand information, appears on minimized sidebar-->
+          <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>B</strong><strong class="text-primary">D</strong></a></div>
         </div>
-    </div>
-</body>
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <h5 class="sidenav-heading">Main</h5>
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <li><a href="\"> <i class="icon-home"></i>Home</a></li>
+            <li><a href="\events_manager"> <i class="icon-form"></i>Events</a></li>
+            <li><a href="\new_event"> <i class="fa fa-bar-chart"></i>Add Event</a></li>
+            <li><a href="\new_event_status"> <i class="fa fa-bar-chart"></i>Add Event Status</a></li>
+            <li><a href="\new_activity"> <i class="icon-grid"></i>Add Activity</a></li>
+          </ul>
+        </div>
+      </div>
+          </nav>
+        </div>
+
+    </nav>
+
+
+            <div class=bgimg>
+                <div class="content">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class=" border container-fluid">
+                            {% block content %}
+
+                            {% endblock %}
+                        </div>
+                    </nav>
+                 </div>
+            </div>
+    </body>
 </html>
