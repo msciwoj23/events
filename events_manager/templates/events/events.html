@@ -3,5 +3,24 @@
 {% block content %}
 <div class = "input">
     <h1>Events page:</h1>
+    <table>
+
+    <th>title</th><th>description</th><th>time</th><th>place</th>
+    {% for event in events %}
+        <tr>
+            <td>
+
+                <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="..." alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">{{ event.title }}</h5>
+                        <p class="card-text">{{ event.description }}</p>
+{#                        <a href="#" class="btn btn-primary">Go somewhere</a>#}
+                      </div>
+</div>
+        </tr>
+    {% endfor %}
+
+    </table>
 </div>
 {% endblock %}
