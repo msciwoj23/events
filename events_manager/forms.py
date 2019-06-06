@@ -8,13 +8,12 @@ class EventForm(ModelForm):
         model = Event
         fields = (
             'event_name',
-            'user',
-            'event_status',
-            'place',
+            'description',
+            'city',
+            'adress',
             'start_date',
             'end_date',
             'deadline_date',
-            'description'
         )
 
 

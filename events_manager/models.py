@@ -33,13 +33,16 @@ class EventStatus(models.Model):
 class Event(models.Model):
     event_id = models.AutoField(primary_key=True)
     event_name = models.CharField(max_length=200)
-    user = ForeignKey(User, on_delete=models.CASCADE)
-    event_status = models.ForeignKey(EventStatus, on_delete=models.CASCADE)
-    place = models.CharField(max_length=200)
+    description = models.CharField(max_length=200)
+    city = models.CharField(max_length=200)
+    adress = models.CharField(max_length=200)
     start_date = models.DateField()
     end_date = models.DateField()
     deadline_date = models.DateField()
-    description = models.CharField(max_length=200)
+    submission_date = models.DateTimeField(auto_now_add=True)
+    user = ForeignKey(User, on_delete=models.CASCADE)
+    event_status = models.ForeignKey(EventStatus, on_delete=models.CASCADE)
+
 
     class Meta:
         db_table = 'event'
@@ -96,7 +99,8 @@ class Message(models.Model):
 class Tag(models.Model):
     tag_id = models.AutoField(primary_key=True)
     tag_name = models.TextField(max_length=200)
-    activities = models.ManyToManyField(Activity)
+    activities = models.ManyToManyField(Activity, null=True, blank=True)
+    events = models.ManyToManyField(Event, null=True, blank=True)
 
     class Meta:
         db_table = 'tag'
