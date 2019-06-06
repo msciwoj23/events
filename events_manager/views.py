@@ -12,7 +12,10 @@ def home(request):
 
 
 def events(request):
-    return render(request, 'events/events.html')
+     events = Event.objects.order_by('event_name')
+     context = {'events': events}
+     return render(request, 'events/events.html', context)
+
 
 
 def new_event(request):
