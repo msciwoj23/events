@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -12,3 +14,6 @@ urlpatterns = [
     path('new_user/', views.new_user, name='events_manager-new_user'),
     path('new_event_status/', views.new_event_status, name='events_manager-new_event_status'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
