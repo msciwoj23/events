@@ -17,7 +17,8 @@ def register(request):
 
     if form.is_valid():
         form.save()
-
+        username = form.cleaned_data.get('username')
+        print("USERNAME: ", username)
     context = {
             'form': form
         }
@@ -25,5 +26,3 @@ def register(request):
         # user = authenticate(username=username, password=raw_password)
         # login(request, user)
     return render(request, 'registration/register.html', context)
-
-

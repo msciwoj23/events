@@ -1,5 +1,8 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.db.models import ForeignKey
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class User(models.Model):
@@ -17,6 +20,15 @@ class User(models.Model):
 
     def __str__(self):
         return self.first_name
+
+    @receiver(post_save, sender=User)
+    def create_user_profile(sender, instance, created, **kwargs):
+        if created:
+            models.User.objects.create(user=instance)
+
+    @receiver(post_save, sender=User)
+    def save_user_profile(sender, instance, **kwargs):
+        instance.profile.save()
 
 
 class EventStatus(models.Model):
