@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a21e782-0734-44a9-97ed-1b05ca22ee23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/whatevs/static/events/Reid_Ellis.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/whatevs/static/events/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/whatevs/static/events/bg1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/whatevs/static/events/bg2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/orderly.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/orderly.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/templates/registration/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events_manager/templates/events/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/events_manager/templates/events/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events_manager/templates/events/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/events_manager/templates/events/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events_manager/templates/events/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/events_manager/templates/events/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events_manager/templates/events/new_activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/events_manager/templates/events/new_activity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events_manager/templates/events/new_event.html" beforeDir="false" afterPath="$PROJECT_DIR$/events_manager/templates/events/new_event.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events_manager/templates/events/new_event_status.html" beforeDir="false" afterPath="$PROJECT_DIR$/events_manager/templates/events/new_event_status.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatevs/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/whatevs/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events_manager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/events_manager/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events_manager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/events_manager/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/templates/registration/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,33 +95,64 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/whatevs/static/wirekstyle.css">
+        <entry file="file://$PROJECT_DIR$/events_manager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login/templates/registration/base.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/events_manager/templates/events/events.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="256">
+              <caret line="41" column="15" lean-forward="true" selection-start-line="38" selection-end-line="44" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/events_manager/templates/events/home.html">
+        <entry file="file://$PROJECT_DIR$/login/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/events_manager/templates/events/new_user.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="9" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/events_manager/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="73" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/events_manager/templates/events/new_event.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="86" selection-start-line="10" selection-start-column="86" selection-end-line="10" selection-end-column="86" />
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login/templates/registration/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="6" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -142,19 +167,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/events_manager/templates/events/new_event.html">
+        <entry file="file://$PROJECT_DIR$/login/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/events_manager/templates/events/new_user.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="238">
+              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -162,24 +178,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/events_manager/templates/events/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+            <state relative-caret-position="85">
+              <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/events_manager/templates/events/new_event_status.html">
+        <entry file="file://$PROJECT_DIR$/whatevs/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            <state relative-caret-position="323">
+              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+              <folding>
+                <element signature="e#631#663#0" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/whatevs/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -205,6 +219,7 @@
       <find>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/style.css&quot;&gt;</find>
       <find>toggle</find>
       <find>border-conta</find>
+      <find>accounts</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -249,9 +264,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/events_manager/forms.py" />
-        <option value="$PROJECT_DIR$/events_manager/urls.py" />
-        <option value="$PROJECT_DIR$/events_manager/views.py" />
-        <option value="$PROJECT_DIR$/login/urls.py" />
         <option value="$PROJECT_DIR$/whatevs/urls.py" />
         <option value="$PROJECT_DIR$/login/templates/registration/new_user.html" />
         <option value="$PROJECT_DIR$/login/apps.py" />
@@ -261,14 +273,20 @@
         <option value="$PROJECT_DIR$/events_manager/templates/events/new_event.html" />
         <option value="$PROJECT_DIR$/events_manager/templates/events/new_event_status.html" />
         <option value="$PROJECT_DIR$/events_manager/templates/events/base.html" />
-        <option value="$PROJECT_DIR$/events_manager/templates/events/events.html" />
         <option value="$PROJECT_DIR$/events_manager/templates/events/home.html" />
+        <option value="$PROJECT_DIR$/events_manager/templates/events/events.html" />
+        <option value="$PROJECT_DIR$/login/templates/registration/register.html" />
+        <option value="$PROJECT_DIR$/events_manager/views.py" />
+        <option value="$PROJECT_DIR$/events_manager/urls.py" />
+        <option value="$PROJECT_DIR$/login/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/login/urls.py" />
+        <option value="$PROJECT_DIR$/login/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="330" />
-    <option name="y" value="95" />
+    <option name="x" value="535" />
+    <option name="y" value="120" />
     <option name="width" value="780" />
     <option name="height" value="595" />
   </component>
@@ -277,6 +295,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -288,6 +307,11 @@
               <item name="orderly" type="b2602c69:ProjectViewProjectNode" />
               <item name="orderly" type="462c0819:PsiDirectoryNode" />
               <item name="env" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="orderly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="orderly" type="462c0819:PsiDirectoryNode" />
+              <item name="events" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="orderly" type="b2602c69:ProjectViewProjectNode" />
@@ -357,7 +381,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -367,25 +390,25 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/whatevs/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/login" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\wirek\Desktop\Projects\orderly\whatevs\static" />
-      <recent name="C:\Users\wirek\Desktop\Projects\orderly\whatevs" />
-      <recent name="C:\Users\wirek\Desktop\Projects\orderly" />
-      <recent name="C:\Users\Wirek\Projects\ook\login" />
-      <recent name="C:\Users\Wirek\Projects\ook\events_manager\templates\events" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\wirek\Desktop\Projects\orderly\events_manager\templates\events\static\events" />
       <recent name="C:\Users\wirek\Desktop\Projects\orderly\events_manager\templates\events\static" />
       <recent name="C:\Users\wirek\Desktop\Projects\orderly\events_manager\static" />
       <recent name="C:\Users\Wirek\Projects\ook\login\templates\registration" />
       <recent name="C:\Users\Wirek\Projects\ook" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wirek\Desktop\Projects\orderly\login" />
+      <recent name="C:\Users\wirek\Desktop\Projects\orderly\login\templates\registration" />
+      <recent name="C:\Users\wirek\Desktop\Projects\orderly\whatevs\static" />
+      <recent name="C:\Users\wirek\Desktop\Projects\orderly\whatevs" />
+      <recent name="C:\Users\wirek\Desktop\Projects\orderly" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -481,6 +504,8 @@
       <workItem from="1559322038422" duration="3889000" />
       <workItem from="1559668298781" duration="702000" />
       <workItem from="1559756670709" duration="9190000" />
+      <workItem from="1559780713357" duration="281000" />
+      <workItem from="1559805422373" duration="2012000" />
     </task>
     <task id="LOCAL-00001" summary="add models">
       <created>1555318683906</created>
@@ -559,11 +584,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558281585783</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="change events template">
+      <created>1559779499728</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1559779499728</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80826000" />
+    <option name="totallyTimeSpent" value="84635000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -578,12 +610,12 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29825738" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30630028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4995958" weight="0.8067376" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49329758" visible="true" weight="0.3380481" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49329758" visible="true" weight="0.3380481" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -592,8 +624,8 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32978722" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32978722" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5067024" side_tool="true" visible="true" weight="0.3380481" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32956153" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5067024" side_tool="true" weight="0.3380481" />
       <window_info anchor="bottom" id="manage.py@whatevs" order="13" weight="0.32978722" />
       <window_info anchor="bottom" id="Python Console" order="14" sideWeight="0.4995958" weight="0.32978722" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="15" sideWeight="0.4987874" weight="0.32978722" />
@@ -650,15 +682,14 @@
     <MESSAGE value="add new forms - user &amp; event_status" />
     <MESSAGE value="add new templates - user &amp; event_status" />
     <MESSAGE value="change base" />
-    <option name="LAST_COMMIT_MESSAGE" value="change base" />
+    <MESSAGE value="change events template" />
+    <option name="LAST_COMMIT_MESSAGE" value="change events template" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/orderly$manage.coverage" NAME="manage Coverage Results" MODIFIED="1557219839939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/whatevs$manage.coverage" NAME="manage Coverage Results" MODIFIED="1555234067244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a99b4714-d0a4-40ac-a6d6-6749d222426d/console.sql" />
-    <entry file="das://a99b4714-d0a4-40ac-a6d6-6749d222426d/database/orderly/schema/public/sequence/django_content_type_id_seq" />
     <entry file="das://a99b4714-d0a4-40ac-a6d6-6749d222426d/database/orderly/schema/public/table/django_content_type" />
     <entry file="das://a99b4714-d0a4-40ac-a6d6-6749d222426d/database/orderly/schema/events/table/event_statuses/index/event_statuses_pkey" />
     <entry file="das://a99b4714-d0a4-40ac-a6d6-6749d222426d/database/orderly/schema/events/table/activities" />
@@ -715,13 +746,6 @@
     <entry file="file://$PROJECT_DIR$/whatevs/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -739,23 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events_manager/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="69" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -765,8 +772,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/events_manager/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="34" column="41" selection-end-line="104" />
+        <state relative-caret-position="578">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="8" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -783,23 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/whatevs/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#631#663#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/events_manager/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -810,16 +800,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/whatevs/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2210">
-          <caret line="130" column="1" selection-start-line="130" selection-start-column="1" selection-end-line="130" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/whatevs/static/events/Reid_Ellis.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/whatevs/static/events/Reid_Ellis.jpg" />
     <entry file="file://$PROJECT_DIR$/whatevs/static/events/bg1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -829,26 +810,90 @@
     <entry file="file://$PROJECT_DIR$/Scripts/activate.bat">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/events_manager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/whatevs/static/events/dice.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/whatevs/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/templates/registration/base.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/whatevs/static/wirekstyle.css">
+    <entry file="file://$PROJECT_DIR$/login/templates/registration/base.html" />
+    <entry file="file://$PROJECT_DIR$/whatevs/static/wirekstyle.css" />
+    <entry file="file://$PROJECT_DIR$/events_manager/templates/events/new_event_status.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events_manager/templates/events/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events_manager/templates/events/events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding>
+            <element signature="e#208#229#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/whatevs/static/wirstyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2822">
+          <caret line="166" column="19" selection-start-line="166" selection-start-column="19" selection-end-line="166" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/whatevs/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="130" column="1" selection-start-line="130" selection-start-column="1" selection-end-line="130" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events_manager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events_manager/templates/events/new_event.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/templates/registration/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="6" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -859,45 +904,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events_manager/templates/events/new_event.html">
+    <entry file="file://$PROJECT_DIR$/login/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/events_manager/templates/events/new_event_status.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/events_manager/templates/events/new_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="238">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/events_manager/templates/events/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+        <state relative-caret-position="85">
+          <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events_manager/templates/events/events.html">
+    <entry file="file://$PROJECT_DIR$/whatevs/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="323">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="e#631#663#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events_manager/templates/events/home.html">
+    <entry file="file://$PROJECT_DIR$/events_manager/templates/events/new_user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="86" selection-start-line="10" selection-start-column="86" selection-end-line="10" selection-end-column="86" />
+        <state>
+          <caret selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events_manager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="41" column="15" lean-forward="true" selection-start-line="38" selection-end-line="44" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

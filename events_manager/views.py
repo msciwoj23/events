@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -7,17 +8,18 @@ from .models import Event, Activity
 
 
 # Create your views here.
+@login_required(login_url='/login')
 def home(request):
     return render(request, 'events/home.html')
 
-
+@login_required(login_url='/login')
 def events(request):
      events = Event.objects.order_by('event_name')
      context = {'events': events}
      return render(request, 'events/events.html', context)
 
 
-
+@login_required(login_url='/login')
 def new_event(request):
     form = EventForm(request.POST or None)
     print('-------------------')
@@ -32,7 +34,7 @@ def new_event(request):
     }
     return render(request, 'events/new_event.html', context)
 
-
+@login_required(login_url='/login')
 def new_activity(request):
     form = ActivityForm(request.POST or None)
     if form.is_valid():
@@ -43,16 +45,9 @@ def new_activity(request):
     return render(request, 'events/new_activity.html', context)
 
 
-def new_user(request):
-    form = UserForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-    context = {
-        'form': form
-    }
-    return render(request, 'events/new_user.html', context)
 
 
+@login_required(login_url='/login')
 def new_event_status(request):
     form = EventStatusForm(request.POST or None)
     if form.is_valid():
