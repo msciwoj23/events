@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate
 from django.shortcuts import render
-
+from django.contrib.auth.models import User
 
 
 
@@ -14,15 +14,12 @@ def login(request):
 
 def register(request):
     form = UserForm(request.POST or None)
-
-    if form.is_valid():
-        form.save()
-        username = form.cleaned_data.get('username')
-        print("USERNAME: ", username)
     context = {
-            'form': form
-        }
-        # password = form.cleaned_data.get('password1')
-        # user = authenticate(username=username, password=raw_password)
-        # login(request, user)
+        'form': form
+    }
+    if request.method == 'POST' and form.is_valid():
+        form.save()
+        data = request.POST.copy()
+        user = User.objects.create_user(username=data['login'], email=data['email'], password=data['password'])
+
     return render(request, 'registration/register.html', context)
