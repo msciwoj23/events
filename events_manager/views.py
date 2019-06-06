@@ -20,7 +20,7 @@ def events(request):
 
 def event_details(request, event_id):
     event = get_object_or_404(Event, pk=event_id)
-    activities_list = Activity.objects.filter(event=event).order_by('-time')[::-1]
+    activities_list = Activity.objects.filter(event=event).order_by('-start_date')[::-1]
     context = {'event': event, 'activities_list' : activities_list }
     return render(request, 'events/event_details.html', context)
 
@@ -32,13 +32,26 @@ def activities(request):
 
 
 def new_event(request):
-    form = EventForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-    context = {
+    if request.method == 'POST':
+        form = EventForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            print(request.FILES)
+            # return redirect('home')
+    else:
+        form = EventForm()
+    return render(request, 'events/new_event.html', {
         'form': form
-    }
-    return render(request, 'events/new_event.html', context)
+    })
+
+    # form = EventForm(request.POST, request.FILES)
+    #
+    # if form.is_valid():
+    #     form.save()
+    # context = {
+    #     'form': form
+    # }
+    # return render(request, 'events/new_event.html', context)
 
 
 def new_activity(request):

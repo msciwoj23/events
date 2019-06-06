@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models import ForeignKey
+from django.utils import timezone
 
 
 class User(models.Model):
@@ -34,15 +35,17 @@ class Event(models.Model):
     event_id = models.AutoField(primary_key=True)
     event_name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    city = models.CharField(max_length=200)
-    adress = models.CharField(max_length=200)
-    start_date = models.DateField()
-    end_date = models.DateField()
-    deadline_date = models.DateField()
+    city = models.CharField(max_length=200, default='unspecified')
+    adress = models.CharField(max_length=200, default='unspecified')
+    start_date = models.DateField(default=timezone.now)
+    end_date = models.DateField(default=timezone.now)
+    deadline_date = models.DateField(default=timezone.now)
     submission_date = models.DateTimeField(auto_now_add=True)
     user = ForeignKey(User, on_delete=models.CASCADE)
     event_status = models.ForeignKey(EventStatus, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
 
+    # class ImageField(upload_to=None, height_field=None, width_field=None, max_length=100, **options)
 
     class Meta:
         db_table = 'event'
@@ -70,9 +73,9 @@ class Activity(models.Model):
     title = models.TextField(max_length=200)
     activity_type = models.TextField(max_length=200)
     description = models.TextField(max_length=200)
-    time = models.DateTimeField()
-    duration = models.DateField()
-    place = models.CharField(max_length=200)
+    start_date = models.TimeField(default=timezone.now)
+    end_date = models.TimeField(default=timezone.now)
+    place = models.CharField(max_length=200, default='place unspecified')
 
 
     class Meta:

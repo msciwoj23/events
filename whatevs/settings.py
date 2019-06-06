@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # our apps
     'events_manager.apps.EventsConfig',
     'login.apps.LoginConfig'
 ]
@@ -128,3 +130,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = ''
+
+
+# this is supposed to be settings for media -- added by OLO
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

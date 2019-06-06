@@ -14,6 +14,9 @@ class EventForm(ModelForm):
             'start_date',
             'end_date',
             'deadline_date',
+            'image',
+            'user',
+            'event_status',
         )
 
 
