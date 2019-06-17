@@ -1,13 +1,26 @@
 {% extends 'events/base.html' %}
 
 {% block content %}
-    <h3>This is Events Homepage!</h3>
 
-    <h4>These are upcoming Events:</h4>
+    <div class="home-constant-content">
+        <h1>Hi! Welcome to Events page!</h1>
 
-    {% for event in event_list %}
-        {{event.event_name}}<br>
-    {% endfor %}
+        <p>In here You can log Board Game, RPG or any other kind of event, fill it with activities of your choice and
+        share it with other people</p>
+    </div>
+
+
+    <div class="home-events-list">
+        <h3>Here are Your upcoming events!</h3>
+        {% for event in event_list %}
+            <div class="single-event">
+                {{event.event_name}}
+            </div>
+        {% endfor %}
+    </div>
+
+
+
 
 
 {% endblock %}
