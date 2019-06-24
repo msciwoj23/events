@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from django.views.generic import CreateView
 
 from .forms import EventForm, ActivityForm, UserForm, EventStatusForm
 from .models import Event, Activity
@@ -19,14 +19,13 @@ def events(request):
      return render(request, 'events/events.html', context)
 
 
+class TestingPickerForNewEventView(CreateView):
+    model = Event
+    form_class = EventForm
+
 @login_required(login_url='/login')
 def new_event(request):
     form = EventForm(request.POST or None)
-    print('-------------------')
-    print('BEGIN')
-    print(form)
-    print('END')
-    print('-------------------')
     if form.is_valid():
         form.save()
     context = {

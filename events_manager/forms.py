@@ -1,9 +1,19 @@
 from django.forms import ModelForm, DateField
+from django import forms
 
 from .models import Event, Activity, User, EventStatus
 
 
+common_input_format_Datefield = forms.DateField(
+                                 input_formats=('%d/%m/%Y',))
+
+
+class DateInput(forms.DateInput):
+    input_type = 'date'
+
+
 class EventForm(ModelForm):
+
     class Meta:
         model = Event
         fields = (
@@ -16,6 +26,11 @@ class EventForm(ModelForm):
             'deadline_date',
             'description'
         )
+        widgets = {
+            'start_date': DateInput(),
+            'end_date': DateInput(),
+            'deadline_date': DateInput(),
+        }
 
 
 class ActivityForm(ModelForm):
